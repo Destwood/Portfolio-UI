@@ -1,0 +1,574 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('./icomoon.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-fb:before {
+    content: "\e900";
+}
+
+.icon-Group:before {
+    content: "\e901";
+}
+
+.icon-insta:before {
+    content: "\e902";
+}
+
+.icon-Linkedin:before {
+    content: "\e903";
+}
+
+/* End icon fonts area */
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&display=swap');
+
+* {
+    font-family: 'Heebo', sans-serif;
+    font-style: normal;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    color: #21243D;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/*  */
+
+.text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.main-title {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 60px;
+}
+
+.title1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 38px;
+    color: #21243D;
+    margin: 0;
+}
+
+.year {
+    font-weight: 900;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+.add-info {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29px;
+    color: #8695A4;
+}
+
+/*  */
+
+/* Header area */
+
+header {
+    background-color: white;
+}
+
+.menu__link {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 29px;
+    text-align: right;
+    letter-spacing: 0;
+}
+
+.menu__link:hover {
+    color: #FF6464;
+}
+
+@media (min-width: 1033px) {
+    .menu {
+        padding: 27px 15px 0 15px;
+    }
+
+    .menu {
+        margin: auto;
+        width: 1030px;
+    }
+
+    .menu__item {
+        list-style: none;
+        display: flex;
+        text-align: center;
+        justify-content: flex-end;
+    }
+
+    header ul li {
+        margin-left: 34px;
+    }
+
+
+}
+
+/* ------------------Burger menu area------------------ */
+
+/* скрываем чекбокс */
+#menu__toggle {
+    opacity: 0;
+    display: none;
+}
+
+.menu__btn {
+    display: none;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+@media (max-width: 1032px) {
+    .menu__btn {
+        display: flex;
+    }
+
+    .menu__item {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        left: 100%;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 80px 0;
+        list-style: none;
+        text-align: center;
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+        border: 1px solid grey;
+    }
+
+    .menu__item li {
+        height: 30%;
+        background-color: white;
+    }
+
+    .menu__link {
+        display: block;
+        height: 100%;
+        text-align: center;
+        font-weight: 500;
+        font-size: 40px;
+    }
+}
+
+/* добавляем "гамбургер" */
+.menu__btn>span,
+.menu__btn>span::before,
+.menu__btn>span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+}
+
+.menu__btn>span::before {
+    content: '';
+    top: -8px;
+}
+
+.menu__btn>span::after {
+    content: '';
+    top: 8px;
+}
+
+/* элементы меню */
+#menu__toggle:checked~.menu__btn>span {
+    transform: rotate(45deg);
+}
+
+#menu__toggle:checked~.menu__btn>span::before {
+    top: 0;
+    transform: rotate(0);
+}
+
+#menu__toggle:checked~.menu__btn>span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+#menu__toggle:checked~.menu__item {
+    visibility: visible;
+    left: 0;
+}
+
+.menu__btn>span,
+.menu__btn>span::before,
+.menu__btn>span::after {
+    transition-duration: .25s;
+}
+
+.menu__item {
+    transition-duration: .25s;
+}
+
+.menu__link {
+    transition-duration: .25s;
+}
+
+/* ------------------Burger menu area end------------------ */
+/* Header area end */
+
+/* Hello area */
+
+.hello {
+    padding: 150px 0 71px 0;
+}
+
+.hello__container {
+    display: flex;
+    justify-content: center;
+}
+
+.hello__title {
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 136%;
+}
+
+.hello__text {
+    max-width: 506px;
+    padding: 18px 100px 0 0px;
+    align-items: center;
+}
+
+
+
+.hello__desc {
+    margin: 30px 0;
+}
+
+.hello__pic {
+    width: 243px;
+    height: 243px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.hello__pic img {
+    max-width: 100%;
+    position: relative;
+    top: -24%;
+}
+
+
+.hello__btn {
+    background: #FF6464;
+    border-radius: 2px;
+    display: inline-flex;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 47px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 136%;
+    color: #fff;
+    transition: background 0.3 ease 0s;
+    margin-top: 2px;
+}
+
+.hello__btn:hover {
+    background-color: #d35757;
+}
+
+.hello__btn-active {
+    color: #d35757;
+}
+
+/* Hello area end */
+
+.recentPosts {
+    background-color: #EDF7FA;
+    height: 396px;
+    margin-top: 70px;
+}
+
+.recentPosts__conteiner {
+    width: 856px;
+    margin: auto;
+    padding: 0px 0 0 0;
+}
+
+.recentPosts__conteiner__head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.recentPosts__conteiner h2 {
+    padding: 7px 0 0 0;
+}
+
+.recentPosts__conteiner__head a {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: right;
+    color: #00A8CC;
+    padding-top: 27px;
+}
+
+.recentPosts__conteiner__head a:hover {
+    text-decoration: underline;
+}
+
+.recentPosts__conteiner__main {
+    width: 100%;
+    display: flex;
+}
+
+.recentPosts__conteiner__main_item {
+    width: 418px;
+    background-color: #fff;
+    padding: 28px;
+}
+
+.recentPosts__conteiner__main_item:first-child {
+    margin-right: 20px;
+}
+
+.recentPosts__conteiner__main div div {
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    margin: 27px 0 17px 0;
+}
+
+.recentPosts__conteiner__main_desc {
+    margin-left: 25px;
+}
+
+.recentPosts__conteiner__main_desc::before {
+    content: "";
+    display: inline;
+    border-left: 2px solid #808080;
+    margin-right: 25px;
+    font-size: 14px;
+}
+
+/* Featured works area */
+
+
+.featuredWorks__container {
+    max-width: 860px;
+    margin: auto;
+    padding: 15px;
+}
+
+
+.featuredWorks__container__item {
+    display: flex;
+    justify-content: center;
+}
+
+.featuredWorks__container-after::after {
+    content: "";
+    display: block;
+    width: 100%;
+    border-bottom: 2px solid #F0F0F0;
+    margin: 15px 0 30px 0;
+}
+
+.featuredWorks__container__item__picture {
+    margin-right: 18px;
+}
+
+.featuredWorks__container__item__picture img {
+    width: 246px;
+    height: 180px;
+    border-radius: 6px;
+}
+
+.featuredWorks__container__item__content-info {
+    padding: 15px 0;
+}
+
+.featuredWorks__container__item__content-info .year {
+    background-color: #142850;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    width: 62px;
+    height: 25px;
+    border-radius: 16px;
+}
+
+.featuredWorks__container__item__content-info .add-info {
+    margin-left: 26px;
+}
+
+@media (max-width: 1032px) {
+    .featuredWorks__container {
+        margin: auto;
+    }
+
+    .featuredWorks__container__item {
+        display: block;
+    }
+
+    .featuredWorks__container__item__picture img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* Featured works area end */
+
+/* Footer area */
+
+footer {
+    width: 100%;
+    padding: 50px 0 50px 0;
+}
+
+footer div {
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+}
+
+.icons {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.icon {
+    font-size: 30px;
+    margin-right: 35px;
+}
+
+/* Footer area end*/
+
+/* blog html area */
+
+.recentPostsBlog {
+    max-width: 682px;
+    margin: 104px auto;
+    text-align: left;
+}
+
+.recentPostsBlog__conteiner__main {
+    padding: 20px 0 0 0;
+}
+
+.recentPostsBlog__conteiner__main_desc::before {
+    content: "";
+    display: inline;
+    border-left: 2px solid #808080;
+    margin-right: 25px;
+    font-size: 14px;
+    margin-left: 27px;
+}
+
+.recentPostsBlog__conteiner__main_item::after {
+    content: "";
+    display: block;
+    width: 100%;
+    border-bottom: 2px solid #F0F0F0;
+    margin: 24px 0 30px 0;
+}
+
+.recentPostsBlog__conteiner__main_item {
+    margin: 30px 0 0px;
+}
+
+.recentPostsBlog__conteiner__main_item h3 {
+    margin-bottom: 18px;
+}
+
+.blogYear {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29px;
+
+    /* Dark Color */
+
+    color: #21243D;
+}
+
+/* blog html area end */
+
+/* Media area */
+
+@media (max-width: 1032px) {
+    .recentPosts__conteiner {
+        width: 100%;
+    }
+
+    .hello__text {
+        max-width: 100%;
+    }
+
+    .recentPostsBlog__conteiner__main {
+        padding: 15px;
+    }
+
+    .blogYear {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #21243D;
+    }
+
+    .add-info {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #8695A4;
+    }
+
+}
